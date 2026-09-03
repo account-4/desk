@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #121314;
+}
+
+/**/
+a {
+    color: #3d8ce6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.font,
+.ADHButton {
+    font-family: "gg sans", "Noto Sans", "Segoe UI", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+.Header {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    background-color: #191a1b;
+    border-bottom: 1px solid #363c42;
+    text-align: right;
+    line-height: 40px;
+    box-sizing: border-box;
+}
+
+.HButton {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    color: #a6a6a7;
+    margin: 0px 0px 0px 10px;
+}
+
+.HButton:hover {
+    display: inline-block;
+    color: #dddddd;
+    text-decoration: underline;
+}
+
+.AboutDesk {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.AboutDeskLeft,
+.AboutDeskRight {
+    width: 25%;
+    flex-shrink: 0;
+    background-color: #121314;
+    font-family: "Yu Mincho", "游明朝", "Hiragino Mincho ProN", serif;
+}
+
+.selnoback::selection{
+    background-color: #ff00009c;
+}
+
+.hide {
+    color: #00000020;
+}
+
+.hide::selection {
+    background-color: #ff0000;
+    color: #000000;
+}
+
+.hide::-webkit-selection {
+    background-color: #ff0000;
+    color: #000000;
+}
+
+.AboutDeskLeft {
+    text-align: left;
+}
+
+.AboutDeskRight {
+    text-align: right;
+}
+
+.AboutDeskCenterBlanc {
+    flex: 1;
+    background-color: #121314;
+    color: #dddddd;
+}
+
+.AboutDeskCenter {
+    flex: 1;
+    background-color: #191a1b;
+    border: 1.5px solid #363c42;
+    border-radius: 8px;
+    color: #dddddd;
+    margin: 20px 0px 20px 0px;
+}
+
+/*行揃え*/
+.center {
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+}
+
+.left {
+    text-align: left;
+    margin: 10px 10px 10px 10px;
+}
+
+.right {
+    text-align: right;
+    margin: 10px 10px 10px 10px;
+}
+
+/*上下マージンなしの揃え*/
+.ncenter {
+    text-align: center;
+    margin: 0px 10px 0px 10px;
+}
+
+.nleft {
+    text-align: left;
+    margin: 0px 10px 0px 10px;
+}
+
+.nright {
+    text-align: right;
+    margin: 0px 10px 0px 10px;
+}
+
+/*縦書き揃え*/
+.rl {
+    writing-mode: vertical-rl;
+    margin: 10px 10px 10px 10px;
+}
+
+.lr {
+    writing-mode: vertical-lr;
+    margin: 10px 10px 10px 10px;
+}
+
+/*コンテンツの配置制御*/
+.jfl {
+    justify-content: flex-start;
+    display: flex;
+    margin: 10px 10px 10px 10px;
+}
+
+.jfr {
+    justify-content: flex-end;
+    display: flex;
+    margin: 10px 10px 10px 10px;
+}
+
+.jfc {
+    justify-content: center;
+    display: flex;
+    margin: 10px 10px 10px 10px;
+}
+
+/*テキストボックス表示*/
+.box {
+    border: 1px solid #363c42;
+    border-radius: 8px;
+    background-color: #2c2e30;
+    padding: 10px;
+    position: relative;
+    display: block;
+}
+
+/*メンバー用のポップ*/
+.pop {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.pop-text {
+    display: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid #363c42;
+    background-color: #191a1b;
+    position: absolute;
+    z-index: 9999;
+}
+
+.pop:focus .pop-text {
+    display: block;
+}
+
+/*color*/
+.red {
+    color: rgb(240, 19, 67);
+}
+
+.yellow {
+    color: rgb(233, 205, 47);
+}
+.purple {
+    color: rgb(185, 25, 185);
+}
+
+.cyan {
+    color: rgb(57, 197, 197);
+}
+
+.green{
+    color: #37ec6d;
+}
+
+.white {
+    color: #dddddd;
+}
+
+.gray {
+    color: #7e7e80;
+}
+
+.black {
+    color: #000000;
+}
+
+.kaze{
+    color:#227cc5;
+}
+
+.lemon{
+    color: #e7e7c2;
+}
+
+/*メンションやチャンネル*/
+.blue {
+    color: rgb(106, 108, 230);
+    background-color: rgb(48, 48, 94);
+    border-radius: 8px;
+    padding: 0px 4px;
+}
+
+.ban {
+    text-decoration: line-through solid red;
+}
+
+.noise {
+    filter: url(#noise);
+}
+/*区切り線*/
+.TLine{
+    border-top: 1px solid #363c42;
+    padding: 8px 0px;
+}
+
+/*チャットログ用装飾*/
+/*すれぬし*/
+.nusi {
+    background-color: #bbcfe9;
+    color: #062b55;
+    font-size: 60%;
+    border-radius: 3px;
+    padding: 0px 3px 0px 3px;
+}
+
+.time {
+    color: #7e7e80;
+    font-size: 70%;
+}
+/*リアクション*/
+.react{
+    border-radius: 8px;
+    padding: 0px 3px;
+    background-color: #3a3939;
+    color: #7e7e80;
+}
+/*リプライ*/
+.rp{
+    font-size: 70%;
+}
+
+.fit {
+    display: block;
+    height: 250px;
+    border-radius: 16px;
+    max-width: 100%;
+    margin: 10px 0;
+}
+/*画像挿入*/
+.fitmini {
+    display: block;
+    height: 200px;
+    border-radius: 16px;
+    max-width: 100%;
+    margin: 10px 0;
+}
+/*ログボダン*/
+.LButton {
+    background-color: transparent;
+    border: 0px;
+    color: #a0a3a7;
+}
+
+.LButton:hover {
+    color: #dddddd;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+    /*スマホ表示*/
+    .AboutDeskLeft,
+    .AboutDeskRight,
+    .ADHLeft,
+    .ADHRight {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+
+    /* PC非表示 */
+    .ADHHButton {
+        display: none;
+    }
+}
+
+.loading {
+  color: #b6b6b6;
+  animation: blink 0.9s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+/*検索ボタン*/
+.SButton{
+    padding: 1px 10px;
+    border-radius:3px;
+    border: 1px solid #363c42;
+    background-color: #363c42;
+    margin-left: 8px;
+    color: #b6b6b6;
+    height: 30px;
+}
+
+.SButton:focus{
+    border: 1px solid #363c42;
+    background-color: #191c1f;
+    color: #818181;
+}
+
+.input{
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid #363c42;
+    color: #b6b6b6;
+    width: 150px;
+    height: 30px;
+    padding: 2px 5px;
+    margin: 5px 0px;
+}
+
+.input:focus{
+    outline: none;
+    border-radius: 3px;
+    border:1px solid#7e7e80;
+    color: #b6b6b6;
+}

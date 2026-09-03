@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DESKとはDESKが求める知性、感性、感受、感覚、痛みを、持つ方々のための場です。DESKは主にDiscordサーバーでのメンバー同士の相互なる認識を提供します。">
+    <title>DESK logs</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../favicon.png" type="image/png">
+</head>
+
+<body class="font">
+    <div class="AboutDesk">
+
+        <div class="AboutDeskLeft"></div>
+
+        <div class="AboutDeskCenterBlanc">
+            <div class="AboutDeskCenter">
+                <header class="Header">
+                    <button class="HButton" onclick="location.href='../index.html'">DESK_?</button>
+                    <button class="HButton" onclick="location.href='../members/members.html'">Members</button>
+                    <button class="HButton" style="color: #dddddd;">Logs</button>
+                    <button class="HButton" onclick="location.href='../works/works.html'">Works</button>
+                    <button class="HButton" onclick="location.href='../rules/rules.html'">Rules</button>
+                </header>
+                <div class="left">
+                    <small class="gray">！当サイトのコンテンツを転載される方は、rulesページをご覧ください。</small><br>
+                    許可をいただいたDESK Discordサーバー内でのチャットログなどを掲載します。<br>
+                </div>
+            </div>
+            <div class="AboutDeskCenter">
+                <header class="Header">
+                    <!--ボタンカラーの切り替えはめんどいので放棄。-->
+                    <!--onclick="replaceContent('ここにソース先のファイルのパス', 'ソース先のファイルのソースのID', '出力先のID')"-->
+                    <!--ソース先のファイルも作成すること。ソース用のテンプレートファイルはtemp_text.htmlです。-->
+                    <!--Scriptを使うので一番下のパスを合わせておいて。-->
+                    <button class="HButton">chatlogs</button>
+                </header>
+                <!--挿入先のdivはclassを付けないほうが良き。-->
+                <div id="window2">
+                    <div class="left">
+                    <button class="LButton" onclick="replaceContent('logs_text.html', 'deathmbti', 'logwindow')">「死」って結局なんなんだろう<small>/2026年7月18日</small></button><br>
+                    <button class="LButton" onclick="replaceContent('logs_text.html', 'kiichiyuumi', 'logwindow')">音声詩ってなんですか？<small>/2026年7月29日</small></button><br>
+                    <button class="LButton" onclick="replaceContent('logs_text.html', 'chaos_Siritori', 'logwindow')">無法しりとり<small>/2026年8月10日</small></button>
+                    </div>
+                </div>
+            </div>
+            <div class="AboutDeskCenter">
+                <div id="logwindow">
+                    <div class="left">
+                    ログを選択してください。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="AboutDeskRight"></div>
+
+    </div>
+</body>
+<script src="../script.js"></script>
+
+</html>

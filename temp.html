@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ページの説明-->
+    <meta name="description" content="テンプレートのファイル">
+    <!--ページ名ここに-->
+    <title>テンプレートページ</title>
+    <!--フォルダの階層に合わせてここのリンクを変えて。-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<!--fontクラスで全体のフォントを決定しています。-->
+
+<body class="font">
+    <!--はじめはDESKについての説明ページだけこのレイアウトにするつもりだったけど、いい感じだったから全部使いまわすことにしました。名前を直すのが怖いので、AboutDeskとついています。-->
+    <div class="AboutDesk">
+        <!--左側の余白。スマホでは見えない。-->
+        <div class="AboutDeskLeft"></div>
+        <!--中央の空間-->
+        <div class="AboutDeskCenterBlanc">
+
+            <!--ここから次のコメントまでをコピーしてAboutDeskCenterBlanc直下に並べるとウィンドウを増やせる-->
+            <div class="AboutDeskCenter">
+                <header class="Header">
+                    <!--ウィンドウのヘッダーのためのボタン。-->
+                    <!--今開いているページならボタンカラー style="color: #dddddd;" -->
+                    <button class="HButton" style="color: #dddddd;">text1</button>
+                    <button class="HButton" onclick="location.href='index.html'">index.html</button>
+                </header>
+                <div class="left">
+                    left、right、centerクラスで文字の揃え方を選べます。rl、lrクラスは縦書きです。タグ内の文字をその揃え方にする。<br>
+                    jfl(コンテンツ左揃え)、jfr（コンテンツ右揃え）、jfl（コンテンツ中央揃え）、divタグの子要素を整列させます。<br>
+                    box、外枠を付けられます。
+                </div>
+            </div>
+            <div><br></div>
+            <!--ここまで-->
+
+            <!--ウィンドウ内のコンテンツを切り替えるヘッダーボタンのテンプレート。script.jsのリンクがあってることを確認。-->
+            <div class="AboutDeskCenter">
+                <header class="Header">
+                    <!--ボタンカラーの切り替えはめんどいので放棄。-->
+                    <!--onclick="replaceContent('ここにソース先のファイルのパス', 'ソース先のファイルのソースのID', '出力先のID')"-->
+                    <!--ソース先のファイルも作成すること。ソース用のテンプレートファイルはtemp_text.htmlです。-->
+                    <!--Scriptを使うので一番下のパスを合わせておいて。-->
+                    <button class="HButton" onclick="replaceContent('temp_text.html', 'text1', 'window2')">text1</button>
+                    <button class="HButton" onclick="replaceContent('temp_text.html', 'text2', 'window2')">text2</button>
+                </header>
+                <!--挿入先のdivはclassを付けないほうが良き。-->
+                <div id="window2">
+                    一番左のボタンの内容と同じものを書いておこう。
+                </div>
+            </div>
+            <!--ここまで-->
+
+        </div>
+
+        <!--右側の余白。スマホでは見えない。-->
+        <div class="AboutDeskRight"></div>
+
+    </div>
+</body>
+<!--フォルダの階層に合わせてここのリンクを変えて。-->
+<script src="script.js"></script>
+
+</html>
